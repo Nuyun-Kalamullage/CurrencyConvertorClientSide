@@ -9,19 +9,20 @@
 
 <div align="center"  >
     <form action="/convertor/result" method="post">
-    <select id="baseCurrency" name="baseCurrency">
-        <option th:value="${baseRate}" th:text="${baseRate}"  ></option>
-        <option th:each="rate: ${rateList}" th:value="${rate}" th:text="${rate}"></option>
-    </select>
-    <input type="number" th:value="${baseAmount}" id="base-amount" name="baseAmount" placeholder="1">
-    <br>
-    <br>
-    <select id="secondaryCurrency" name="secondaryCurrency">
-        <option th:value="${secondaryRate}" th:text="${secondaryRate}" ></option>
-        <option th:each="rate: ${rateList}" th:value="${rate}" th:text="${rate}"></option>
-    </select>
+        <input type="number" th:value="${baseAmount}" id="base-amount" name="baseAmount" placeholder="1" required>
+        <select id="baseCurrency" name="baseCurrency" required>
+                    <option th:value="${baseRate}" th:text="${baseRate}"  ></option>
+            <option th:each="rate: ${rateList}" th:value="${rate}" th:text="${rate}"></option>
+        </select>
 
-    <input th:value="${resultAmount}" type="text" id="secondary-amount" name="secondaryAmount" placeholder="0.00">
+        <br>
+        <br>
+        <input th:value="${resultAmount}" type="text" id="secondary-amount" name="secondaryAmount" placeholder="0.00">
+        <select id="secondaryCurrency" name="secondaryCurrency" required>
+            <option th:value="${secondaryRate}" th:text="${secondaryRate}" ></option>
+            <option th:each="rate: ${rateList}" th:value="${rate}" th:text="${rate}"></option>
+        </select>
+
         <br>
         <br>
         <input type="submit" value="Submit">
