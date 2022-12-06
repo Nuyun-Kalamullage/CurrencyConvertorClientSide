@@ -39,6 +39,7 @@ public class Currency {
         }
     }
 
+
     public double getSecondaryCurrencyAmount() {
         return secondaryCurrencyAmount;
     }
