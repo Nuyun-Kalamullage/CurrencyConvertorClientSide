@@ -9,7 +9,7 @@
 <h1 align="center"> <b>Currency Convertor</b></h1>
 
 <div align="center"  >
-    <form action="/convertor/result" method="post">
+    <form action="/convertor/" method="post">
         <div class='input-group-wrapper'>
             <input class='first' type="number" th:value="${baseAmount}" id="base-amount" name="baseAmount" placeholder="1" required>
             <select class='second' id="baseCurrency" name="baseCurrency" required>
@@ -18,7 +18,7 @@
             </select>
         </div>
         <div class='input-group-wrapper'>
-        <input class='first' th:value="${resultAmount}" type="text" id="secondary-amount" name="secondaryAmount" placeholder="0.00">
+        <input class='first' th:value="${resultAmount}" type="text" id="secondary-amount" name="secondaryAmount" placeholder="0.00" readonly>
         <select class='second' id="secondaryCurrency" name="secondaryCurrency" required>
             <option th:value="${secondaryRate}" th:text="${secondaryRate}" ></option>
             <option th:each="rate: ${rateList}" th:value="${rate}" th:text="${rate}"></option>

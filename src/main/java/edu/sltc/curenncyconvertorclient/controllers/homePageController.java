@@ -32,7 +32,7 @@ public class homePageController {
         modelTemp=model;
         return "currency";
     }
-    @RequestMapping(value = "/convertor/result", method = RequestMethod.POST)
+    @RequestMapping(value = "/convertor/", method = RequestMethod.POST)
     public String updatePage( HttpServletRequest request, Model model, String baseCurrency, String secondaryCurrency, double baseAmount) {
         stub.WebServerService demoWSService = new stub.WebServerService();
         stub.WebServer demoWSPort = demoWSService.getWebServerPort();
