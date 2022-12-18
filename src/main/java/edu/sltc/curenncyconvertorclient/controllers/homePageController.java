@@ -11,11 +11,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 public class homePageController {
     Model modelTemp;
-    List<String> currencyList = new ArrayList<String>(Arrays.asList(currencyListString.getNames().split(",")));;
+    List<String> currencyList = new ArrayList<String>(Arrays.asList(currencyListString.getNames().split(","))).stream().sorted().collect(Collectors.toList());
     @RequestMapping("/convertor")
     public String convertorPage(HttpServletRequest request, Model model) {
         stub.WebServerService demoWSService = new stub.WebServerService();
