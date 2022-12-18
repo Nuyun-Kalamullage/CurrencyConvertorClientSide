@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Currency Convertor</title>
-    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <link th:href="@{/Styles/main.css}" rel="stylesheet" />
 </head>
 <body>
-<h1 align="center"> <b>Currency Convertor</b></h1>
+<h1> <b>Currency Convertor</b></h1>
 
-<div align="center"  >
-    <form action="/convertor/" method="post">
+<div class='base-div'>
+    <form action="/" method="post">
         <div class='input-group-wrapper'>
             <input class='first' type="number" th:value="${baseAmount}" id="base-amount" name="baseAmount" placeholder="1" required>
             <select class='second' id="baseCurrency" name="baseCurrency" required>

@@ -9,6 +9,7 @@ public class CurenncyConvertorClientApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(CurenncyConvertorClientApplication.class, args);
+        System.out.println("\n-------------------------------------------------------------------------------- Website Hosted Successful --------------------------------------------------------------------------------");
     }
 
 }

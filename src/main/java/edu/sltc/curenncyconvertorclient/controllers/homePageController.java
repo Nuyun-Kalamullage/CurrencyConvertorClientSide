@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,22 +16,20 @@ import java.util.stream.Collectors;
 public class homePageController {
     Model modelTemp;
     List<String> currencyList = new ArrayList<String>(Arrays.asList(currencyListString.getNames().split(","))).stream().sorted().collect(Collectors.toList());
-    @RequestMapping("/convertor")
+    stub.WebServerService soapWebService = new stub.WebServerService();
+    stub.WebServer serverPort = soapWebService.getWebServerPort();
+    @RequestMapping("/")
     public String convertorPage(HttpServletRequest request, Model model) {
-        stub.WebServerService demoWSService = new stub.WebServerService();
-        stub.WebServer demoWSPort = demoWSService.getWebServerPort();
         model.addAttribute("rateList", currencyList);
-        model.addAttribute("baseRate", currencyList.get(59));//currencyList[59]
-        model.addAttribute("secondaryRate", currencyList.get(132));//currencyList[123]
+        model.addAttribute("baseRate", currencyList.get(141));//currencyList[59]
+        model.addAttribute("secondaryRate", currencyList.get(161));//currencyList[123]
         modelTemp=model;
 
         return "currency";
     }
-    @RequestMapping(value = "/convertor/", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String updatePage( HttpServletRequest request, Model model, String baseCurrency, String secondaryCurrency, double baseAmount) {
-        stub.WebServerService demoWSService = new stub.WebServerService();
-        stub.WebServer demoWSPort = demoWSService.getWebServerPort();
-        double result = demoWSPort.getAmount(baseCurrency,secondaryCurrency,baseAmount);
+        double result = serverPort.getAmount(baseCurrency,secondaryCurrency,baseAmount);
         model.addAttribute("resultAmount",result);
         model.addAttribute("baseAmount",baseAmount);
         model.addAttribute("baseRate",baseCurrency);
