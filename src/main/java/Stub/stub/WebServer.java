@@ -45,16 +45,4 @@ public interface WebServer {
         @WebParam(name = "arg2", targetNamespace = "")
         double arg2);
 
-    /**
-     * 
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getKeyList", targetNamespace = "http://soa.sltc.com/", className = "stub.GetKeyList")
-    @ResponseWrapper(localName = "getKeyListResponse", targetNamespace = "http://soa.sltc.com/", className = "stub.GetKeyListResponse")
-    @Action(input = "http://soa.sltc.com/webServer/getKeyListRequest", output = "http://soa.sltc.com/webServer/getKeyListResponse")
-    public String getKeyList();
-
 }
