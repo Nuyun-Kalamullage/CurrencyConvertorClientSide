@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "webServerService", targetNamespace = "http://soa.sltc.com/", wsdlLocation = "http://localhost:8888/SoapWebService?wsdl")
+@WebServiceClient(name = "webServerService", targetNamespace = "http://currencyconvertorserver.sltc.edu/", wsdlLocation = "http://localhost:8888/SoapWebService?wsdl")
 public class WebServerService
     extends Service
 {
 
     private final static URL WEBSERVERSERVICE_WSDL_LOCATION;
     private final static WebServiceException WEBSERVERSERVICE_EXCEPTION;
-    private final static QName WEBSERVERSERVICE_QNAME = new QName("http://soa.sltc.com/", "webServerService");
+    private final static QName WEBSERVERSERVICE_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "webServerService");
 
     static {
         URL url = null;
@@ -67,7 +67,7 @@ public class WebServerService
      */
     @WebEndpoint(name = "webServerPort")
     public stub.WebServer getWebServerPort() {
-        return super.getPort(new QName("http://soa.sltc.com/", "webServerPort"), WebServer.class);
+        return super.getPort(new QName("http://currencyconvertorserver.sltc.edu/", "webServerPort"), WebServer.class);
     }
 
     /**
@@ -79,7 +79,7 @@ public class WebServerService
      */
     @WebEndpoint(name = "webServerPort")
     public WebServer getWebServerPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://soa.sltc.com/", "webServerPort"), WebServer.class, features);
+        return super.getPort(new QName("http://currencyconvertorserver.sltc.edu/", "webServerPort"), WebServer.class, features);
     }
 
     private static URL __getWsdlLocation() {

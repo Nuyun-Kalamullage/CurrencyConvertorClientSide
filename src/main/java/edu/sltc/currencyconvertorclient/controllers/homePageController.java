@@ -1,6 +1,6 @@
-package edu.sltc.curenncyconvertorclient.controllers;
+package edu.sltc.currencyconvertorclient.controllers;
 
-import edu.sltc.curenncyconvertorclient.model.currencyListString;
+import edu.sltc.currencyconvertorclient.model.currencyListString;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

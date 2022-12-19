@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "webServer", targetNamespace = "http://soa.sltc.com/")
+@WebService(name = "webServer", targetNamespace = "http://currencyconvertorserver.sltc.edu/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -34,9 +34,9 @@ public interface WebServer {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAmount", targetNamespace = "http://soa.sltc.com/", className = "stub.GetAmount")
-    @ResponseWrapper(localName = "getAmountResponse", targetNamespace = "http://soa.sltc.com/", className = "stub.GetAmountResponse")
-    @Action(input = "http://soa.sltc.com/webServer/getAmountRequest", output = "http://soa.sltc.com/webServer/getAmountResponse")
+    @RequestWrapper(localName = "getAmount", targetNamespace = "http://currencyconvertorserver.sltc.edu/", className = "stub.GetAmount")
+    @ResponseWrapper(localName = "getAmountResponse", targetNamespace = "http://currencyconvertorserver.sltc.edu/", className = "stub.GetAmountResponse")
+    @Action(input = "http://currencyconvertorserver.sltc.edu/webServer/getAmountRequest", output = "http://currencyconvertorserver.sltc.edu/webServer/getAmountResponse")
     public double getAmount(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0,

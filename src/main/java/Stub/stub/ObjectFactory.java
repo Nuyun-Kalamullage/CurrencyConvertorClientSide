@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetAmountResponse_QNAME = new QName("http://soa.sltc.com/", "getAmountResponse");
-    private final static QName _GetAmount_QNAME = new QName("http://soa.sltc.com/", "getAmount");
+    private final static QName _GetAmountResponse_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "getAmountResponse");
+    private final static QName _GetAmount_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "getAmount");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: stub
@@ -54,7 +54,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetAmountResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://soa.sltc.com/", name = "getAmountResponse")
+    @XmlElementDecl(namespace = "http://currencyconvertorserver.sltc.edu/", name = "getAmountResponse")
     public JAXBElement<GetAmountResponse> createGetAmountResponse(GetAmountResponse value) {
         return new JAXBElement<GetAmountResponse>(_GetAmountResponse_QNAME, GetAmountResponse.class, null, value);
     }
@@ -63,7 +63,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetAmount }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://soa.sltc.com/", name = "getAmount")
+    @XmlElementDecl(namespace = "http://currencyconvertorserver.sltc.edu/", name = "getAmount")
     public JAXBElement<GetAmount> createGetAmount(GetAmount value) {
         return new JAXBElement<GetAmount>(_GetAmount_QNAME, GetAmount.class, null, value);
     }
