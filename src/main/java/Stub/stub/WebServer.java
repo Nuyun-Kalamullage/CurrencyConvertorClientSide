@@ -34,10 +34,10 @@ public interface WebServer {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAmount", targetNamespace = "http://currencyconvertorserver.sltc.edu/", className = "stub.GetAmount")
-    @ResponseWrapper(localName = "getAmountResponse", targetNamespace = "http://currencyconvertorserver.sltc.edu/", className = "stub.GetAmountResponse")
-    @Action(input = "http://currencyconvertorserver.sltc.edu/webServer/getAmountRequest", output = "http://currencyconvertorserver.sltc.edu/webServer/getAmountResponse")
-    public double getAmount(
+    @RequestWrapper(localName = "convert", targetNamespace = "http://currencyconvertorserver.sltc.edu/", className = "stub.Convert")
+    @ResponseWrapper(localName = "convertResponse", targetNamespace = "http://currencyconvertorserver.sltc.edu/", className = "stub.ConvertResponse")
+    @Action(input = "http://currencyconvertorserver.sltc.edu/webServer/convertRequest", output = "http://currencyconvertorserver.sltc.edu/webServer/convertResponse")
+    public double convert(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0,
         @WebParam(name = "arg1", targetNamespace = "")

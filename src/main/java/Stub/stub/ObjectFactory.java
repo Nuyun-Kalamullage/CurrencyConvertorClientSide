@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetAmountResponse_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "getAmountResponse");
-    private final static QName _GetAmount_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "getAmount");
+    private final static QName _ConvertResponse_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "convertResponse");
+    private final static QName _Convert_QNAME = new QName("http://currencyconvertorserver.sltc.edu/", "convert");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: stub
@@ -35,37 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAmountResponse }
+     * Create an instance of {@link ConvertResponse }
      * 
      */
-    public GetAmountResponse createGetAmountResponse() {
-        return new GetAmountResponse();
+    public ConvertResponse createConvertResponse() {
+        return new ConvertResponse();
     }
 
     /**
-     * Create an instance of {@link GetAmount }
+     * Create an instance of {@link Convert }
      * 
      */
-    public GetAmount createGetAmount() {
-        return new GetAmount();
+    public Convert createConvert() {
+        return new Convert();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAmountResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConvertResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://currencyconvertorserver.sltc.edu/", name = "getAmountResponse")
-    public JAXBElement<GetAmountResponse> createGetAmountResponse(GetAmountResponse value) {
-        return new JAXBElement<GetAmountResponse>(_GetAmountResponse_QNAME, GetAmountResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://currencyconvertorserver.sltc.edu/", name = "convertResponse")
+    public JAXBElement<ConvertResponse> createConvertResponse(ConvertResponse value) {
+        return new JAXBElement<ConvertResponse>(_ConvertResponse_QNAME, ConvertResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAmount }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Convert }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://currencyconvertorserver.sltc.edu/", name = "getAmount")
-    public JAXBElement<GetAmount> createGetAmount(GetAmount value) {
-        return new JAXBElement<GetAmount>(_GetAmount_QNAME, GetAmount.class, null, value);
+    @XmlElementDecl(namespace = "http://currencyconvertorserver.sltc.edu/", name = "convert")
+    public JAXBElement<Convert> createConvert(Convert value) {
+        return new JAXBElement<Convert>(_Convert_QNAME, Convert.class, null, value);
     }
 
 }

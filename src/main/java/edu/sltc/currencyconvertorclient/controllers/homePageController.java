@@ -1,4 +1,10 @@
 package edu.sltc.currencyconvertorclient.controllers;
+/**
+ * @author Nuyun-Kalamullage
+ * @date 21-12-2022
+ * @file_name homePageController
+ * @project_Name CurrencyConvertorClient
+ */
 
 import edu.sltc.currencyconvertorclient.model.currencyListString;
 import org.springframework.stereotype.Controller;
@@ -27,7 +33,7 @@ public class homePageController {
     }
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String updatePage( HttpServletRequest request, Model model, String baseCurrency, String secondaryCurrency, double baseAmount) {//make function for POST mapping
-        double result = serverPort.getAmount(baseCurrency,secondaryCurrency,baseAmount); //Receive data from the server through wsdl file.
+        double result = serverPort.convert(baseCurrency,secondaryCurrency,baseAmount); //Receive data from the server through wsdl file.
         model.addAttribute("resultAmount",result); //adding result-amount that we receive from the server to html file.
         model.addAttribute("baseAmount",baseAmount);//adding base-amount as user given earlier to html file.
         model.addAttribute("baseRate",baseCurrency);//adding base-currency as user given earlier to html file.
